@@ -15,7 +15,7 @@ data "aws_ami" "amazon_linux" {
 resource "aws_instance" "demo_ec2" {
   ami           = data.aws_ami.amazon_linux.id
   instance_type = var.ec2_instance_type
-  key_name      = "my-key"
+  key_name      = var.key_name
   user_data     = file("${path.module}/scripts/install.sh")
   security_groups = ["default"]
 

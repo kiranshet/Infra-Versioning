@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "ec2_instance_type" {
   description = "EC2 instance type"
   type        = string
-  default     = "t2.medium"
+  default     = "c7i-flex.large"
 }
 
 variable "bucket_name" {

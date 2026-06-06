@@ -15,3 +15,9 @@ variable "bucket_name" {
   type        = string
   default     = "infra-versioning-state-bucket-kiran"
 }
+
+variable "key_name" {
+  description = "SSH key pair name"
+  type        = string
+  default     = "key-pair-0702"
+}

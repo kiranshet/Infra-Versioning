@@ -15,7 +15,7 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 withAWS(credentials: 'aws-creds', region: "${AWS_REGION}") {
-                    sh 'terraform init -input=false'
+                    sh 'terraform init -input=false, -reconfigure'
                 }
             }
         }
